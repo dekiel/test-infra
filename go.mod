@@ -69,7 +69,7 @@ require (
 	golang.org/x/net v0.5.0
 	golang.org/x/oauth2 v0.4.0
 	google.golang.org/api v0.108.0
-	google.golang.org/grpc v1.52.0
+	google.golang.org/grpc v1.52.1
 	gopkg.in/ini.v1 v1.66.2 // indirect
 	gopkg.in/yaml.v2 v2.4.0
 	gopkg.in/yaml.v3 v3.0.1
@@ -81,8 +81,6 @@ require (
 	knative.dev/pkg v0.0.0-20210908025933-71508fc69a57 // indirect
 	sigs.k8s.io/yaml v1.3.0
 )
-
-require github.com/google/go-github/v48 v48.2.0
 
 require (
 	cloud.google.com/go v0.107.0 // indirect
