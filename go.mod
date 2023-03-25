@@ -8,7 +8,7 @@ require (
 	cloud.google.com/go/firestore v1.9.0
 	cloud.google.com/go/kms v1.10.0
 	cloud.google.com/go/logging v1.7.0
-	cloud.google.com/go/pubsub v1.29.0
+	cloud.google.com/go/pubsub v1.30.0
 	cloud.google.com/go/storage v1.30.0
 	github.com/Masterminds/semver v1.5.0
 	github.com/Masterminds/sprig v2.22.0+incompatible
@@ -62,7 +62,7 @@ require (
 	sigs.k8s.io/yaml v1.3.0
 )
 
-require k8s.io/test-infra v0.0.0-20230324183220-d09276bf79ea
+require k8s.io/test-infra v0.0.0-20230324233403-1fc4cf9e452c
 
 require (
 	cloud.google.com/go v0.110.0 // indirect
@@ -232,7 +232,7 @@ require (
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
 	gomodules.xyz/jsonpatch/v2 v2.2.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
-	google.golang.org/genproto v0.0.0-20230306155012-7f2fa6fef1f4 // indirect
+	google.golang.org/genproto v0.0.0-20230320184635-7606e756e683 // indirect
 	google.golang.org/protobuf v1.29.1 // indirect
 	gopkg.in/fsnotify.v1 v1.4.7 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
