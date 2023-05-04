@@ -8,7 +8,7 @@ require (
 	cloud.google.com/go/firestore v1.9.0
 	cloud.google.com/go/kms v1.10.1
 	cloud.google.com/go/logging v1.7.0
-	cloud.google.com/go/pubsub v1.30.0
+	cloud.google.com/go/pubsub v1.30.1
 	cloud.google.com/go/storage v1.30.1
 	github.com/Masterminds/semver v1.5.0
 	github.com/Masterminds/sprig v2.22.0+incompatible
@@ -62,7 +62,7 @@ require (
 	sigs.k8s.io/yaml v1.3.0
 )
 
-require k8s.io/test-infra v0.0.0-20230425181016-c5c4d7a4f032
+require k8s.io/test-infra v0.0.0-20230504114642-c26ae7f15aa1
 
 require (
 	cloud.google.com/go v0.110.0 // indirect
