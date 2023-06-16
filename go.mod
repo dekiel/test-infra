@@ -42,7 +42,7 @@ require (
 	go.uber.org/zap v1.24.0
 	golang.org/x/net v0.11.0
 	golang.org/x/oauth2 v0.9.0
-	google.golang.org/api v0.127.0
+	google.golang.org/api v0.128.0
 	google.golang.org/grpc v1.55.0
 	gopkg.in/yaml.v2 v2.4.0
 	gopkg.in/yaml.v3 v3.0.1
@@ -54,7 +54,7 @@ require (
 
 require (
 	github.com/tektoncd/pipeline v0.36.0
-	k8s.io/test-infra v0.0.0-20230613184959-4b4d19e9c026
+	k8s.io/test-infra v0.0.0-20230616111219-182d73eee8ee
 )
 
 require (
