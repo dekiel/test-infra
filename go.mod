@@ -43,7 +43,7 @@ require (
 	golang.org/x/net v0.11.0
 	golang.org/x/oauth2 v0.9.0
 	google.golang.org/api v0.128.0
-	google.golang.org/grpc v1.56.0
+	google.golang.org/grpc v1.56.1
 	gopkg.in/yaml.v2 v2.4.0
 	gopkg.in/yaml.v3 v3.0.1
 	k8s.io/api v0.24.2
@@ -54,7 +54,7 @@ require (
 
 require (
 	github.com/tektoncd/pipeline v0.36.0
-	k8s.io/test-infra v0.0.0-20230616182819-e730b6076907
+	k8s.io/test-infra v0.0.0-20230622155540-9efe95112309
 )
 
 require (
