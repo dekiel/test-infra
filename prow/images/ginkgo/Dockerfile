@@ -1,4 +1,4 @@
-FROM golang:1.22.2-alpine AS builder
+FROM golang:1.22.3-alpine AS builder
 
 COPY . /test-infra
 WORKDIR /test-infra
@@ -6,7 +6,7 @@ RUN go get github.com/onsi/ginkgo/v2/ginkgo/generators && \
     go install github.com/onsi/ginkgo/v2/ginkgo && \
     go get github.com/onsi/gomega/...
 
-FROM golang:1.22.2-alpine
+FROM golang:1.22.3-alpine
 
 COPY --from=builder /go/bin/ginkgo /ginkgo
 RUN apk update && \
