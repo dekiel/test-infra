@@ -1,5 +1,6 @@
 FROM golang:1.22.3-alpine as builder
 
+# some comment
 WORKDIR /go/src/github.com/kyma-project/test-infra
 COPY . .
 
