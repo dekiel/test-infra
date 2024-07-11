@@ -3,7 +3,7 @@ module github.com/kyma-project/test-infra
 go 1.21
 
 require (
-	cloud.google.com/go/compute/metadata v0.3.0
+	cloud.google.com/go/compute/metadata v0.5.0
 	cloud.google.com/go/firestore v1.15.0
 	cloud.google.com/go/logging v1.10.0
 	cloud.google.com/go/pubsub v1.39.0
@@ -190,7 +190,7 @@ require (
 	gocloud.dev v0.19.0 // indirect
 	golang.org/x/crypto v0.24.0 // indirect
 	golang.org/x/sync v0.7.0 // indirect
-	golang.org/x/sys v0.21.0 // indirect
+	golang.org/x/sys v0.22.0 // indirect
 	golang.org/x/term v0.21.0 // indirect
 	golang.org/x/text v0.16.0 // indirect
 	golang.org/x/time v0.5.0 // indirect
