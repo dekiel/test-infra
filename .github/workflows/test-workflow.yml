@@ -7,6 +7,7 @@ on:
     types: [ opened, edited, synchronize, reopened, ready_for_review ]
     paths:
       - "external-images.yaml"
+      - ".github/workflows/test-workflowe.yml"
 
 permissions:
   id-token: write # This is required for requesting the JWT token
@@ -41,7 +42,8 @@ jobs:
       
       - name: Sync Images
         id: sync_images
-        uses: docker://europe-docker.pkg.dev/kyma-project/prod/test-infra/ko/image-syncer:v20240822-9b523f40
+      #  uses: docker://europe-docker.pkg.dev/kyma-project/prod/test-infra/ko/image-syncer:v20240822-9b523f40
+        uses: docker://bash:latest
         with:
-          entrypoint: /ko-app/image-syncer
-          args: --images-file=./external-images.yaml --target-repo-auth-key=${{ github.workspace }}/creds.json --dry-run ${{ inputs.dry-run }} --debug ${{ inputs.debug }}
+          entrypoint: pwd; ls -l
+      #    args: --images-file=./external-images.yaml --target-repo-auth-key=${{ github.workspace }}/creds.json --dry-run ${{ inputs.dry-run }} --debug ${{ inputs.debug }}
