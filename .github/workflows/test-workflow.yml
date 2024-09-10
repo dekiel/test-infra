@@ -49,4 +49,4 @@ jobs:
         with:
           entrypoint: /ko-app/image-syncer
           #args: bash -c "pwd; ls -lR /"
-          args: --images-file=/github/workspace/external-images.yaml --target-repo-auth-key=${{ github.workspace }}/creds.json --dry-run true --debug true
+          args: --images-file=/github/workspace/external-images.yaml --target-repo-auth-key=/github/workspace/creds.json --dry-run true --debug true
