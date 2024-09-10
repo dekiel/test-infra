@@ -41,7 +41,7 @@ jobs:
       
       - name: Sync Images
         id: sync_images
-        uses: addnab/docker-run-action@3b7e5e2681a0bda95ee4ce0645c28ca1e78ce9ee
+        uses: addnab/docker-run-action@3e77f186b7a929ef010f183a9e24c0f9955ea609
         with:
           image: kyma-project/prod/test-infra/ko/image-syncer:v20240822-9b523f40
           registry: europe-docker.pkg.dev
