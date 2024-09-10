@@ -1,4 +1,4 @@
-name: pull-sync-external-images
+name: test-pull-sync-external-images
 
 on:
   pull_request:
@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Verify repository owner
         id: verify_repo_owner
-        if: ${{ github.repository_owner != 'kyma-project' }}
+        if: ${{ github.repository_owner != 'dekiel' }}
         run: |
           echo "Using image-syncer workflow outside of kyma-project organisation is not supported."
           exit 1
