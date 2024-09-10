@@ -32,6 +32,9 @@ jobs:
 
       - name: simulate-auth-gcp
         run: echo "Using image-syncer workflow outside of kyma-project organisation is not supported." > ./creds.json
+
+      - name: echo
+        run: echo ${{ github.workspace }}
       
       #      - name: Authenticate in GCP
       #        id: authenticate_in_gcp
@@ -42,8 +45,8 @@ jobs:
       
       - name: Sync Images
         id: sync_images
-      #  uses: docker://europe-docker.pkg.dev/kyma-project/prod/test-infra/ko/image-syncer:v20240822-9b523f40
-        uses: docker://bash:latest
+        uses: docker://europe-docker.pkg.dev/kyma-project/prod/test-infra/ko/image-syncer:v20240822-9b523f40
         with:
-          args: bash -c "pwd; ls -lR /"
-      #    args: --images-file=./external-images.yaml --target-repo-auth-key=${{ github.workspace }}/creds.json --dry-run ${{ inputs.dry-run }} --debug ${{ inputs.debug }}
+          entrypoint: /ko-app/image-syncer
+          #args: bash -c "pwd; ls -lR /"
+          args: --images-file=/github/workspace/external-images.yaml --target-repo-auth-key=${{ github.workspace }}/creds.json --dry-run true --debug true
