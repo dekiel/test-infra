@@ -45,5 +45,5 @@ jobs:
       #  uses: docker://europe-docker.pkg.dev/kyma-project/prod/test-infra/ko/image-syncer:v20240822-9b523f40
         uses: docker://bash:latest
         with:
-          args: pwd; ls -l
+          args: bash -c "pwd; ls -lR /"
       #    args: --images-file=./external-images.yaml --target-repo-auth-key=${{ github.workspace }}/creds.json --dry-run ${{ inputs.dry-run }} --debug ${{ inputs.debug }}
