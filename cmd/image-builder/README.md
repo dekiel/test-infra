@@ -123,7 +123,7 @@ The default tag is computed based on the template provided in the Image Builder 
 The default tag is always added to the image, even if the user provides custom tags.
 Image Builder supports two default tags:
 
-- **Pull Request Default Tag**: The default tag template for images built on pull requests is `pr-<PR_NUMBER>`.
+- **Pull Request Default Tag**: The default tag template for images built on pull requests is `PR-<PR_NUMBER>`.
   Example tag value: `PR-123`.
 - **Push Default Tag**: The default tag template for images built on push, schedule and manual triggers is `v<DATE>-<SHORT_SHA>`.
   Example tag value: `v20210930-1234567`.
