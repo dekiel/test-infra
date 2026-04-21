@@ -7,6 +7,7 @@ import (
 	"strings"
 	"time"
 
+	logging "github.com/kyma-project/test-infra/pkg/logging/v2"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )
@@ -17,11 +18,11 @@ type ConsoleLogger struct {
 	*zap.SugaredLogger
 }
 
-// Compile-time check: ConsoleLogger must implement Logger.
-var _ Logger = (*ConsoleLogger)(nil)
+// Compile-time check: ConsoleLogger must implement logging.LoggerInterface.
+var _ logging.LoggerInterface = (*ConsoleLogger)(nil)
 
 // With creates a child logger with additional context fields.
-func (l *ConsoleLogger) With(args ...interface{}) Logger {
+func (l *ConsoleLogger) With(args ...interface{}) logging.LoggerInterface {
 	return &ConsoleLogger{
 		SugaredLogger: l.SugaredLogger.With(args...),
 	}

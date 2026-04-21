@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"cloud.google.com/go/compute/metadata"
+	logging "github.com/kyma-project/test-infra/pkg/logging/v2"
 	"go.uber.org/zap/zapcore"
 )
 
@@ -37,7 +38,7 @@ const (
 //	    panic(err)
 //	}
 //	defer logger.Sync()
-func New() (Logger, error) {
+func New() (logging.LoggerInterface, error) {
 	level, err := parseLogLevel()
 	if err != nil {
 		return nil, err
@@ -69,7 +70,7 @@ func New() (Logger, error) {
 }
 
 // newAPILogger creates a GCP API-only logger from env vars.
-func newAPILogger(level zapcore.Level) (Logger, error) {
+func newAPILogger(level zapcore.Level) (logging.LoggerInterface, error) {
 	projectID := os.Getenv(EnvGCPProjectID)
 	if projectID == "" {
 		return nil, fmt.Errorf("%s is required when %s is %q", EnvGCPProjectID, EnvLogDestination, "api")
@@ -87,7 +88,7 @@ func newAPILogger(level zapcore.Level) (Logger, error) {
 
 // newCombinedLogger creates a logger that writes to both console and GCP API
 // simultaneously. Each log entry goes to stdout/stderr AND to Cloud Logging.
-func newCombinedLogger(level zapcore.Level) (Logger, error) {
+func newCombinedLogger(level zapcore.Level) (logging.LoggerInterface, error) {
 	projectID := os.Getenv(EnvGCPProjectID)
 	if projectID == "" {
 		return nil, fmt.Errorf("%s is required when %s is %q", EnvGCPProjectID, EnvLogDestination, "console-and-api")

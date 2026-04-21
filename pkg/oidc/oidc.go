@@ -14,7 +14,7 @@ import (
 	"github.com/coreos/go-oidc/v3/oidc"
 	"github.com/go-jose/go-jose/v4"
 	"github.com/go-jose/go-jose/v4/jwt"
-	"github.com/kyma-project/test-infra/pkg/logging"
+	"github.com/kyma-project/test-infra/pkg/logging/v2"
 )
 
 var (

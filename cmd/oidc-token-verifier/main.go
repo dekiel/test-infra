@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kyma-project/test-infra/pkg/logging"
+	tilogger "github.com/kyma-project/test-infra/pkg/logger"
+	"github.com/kyma-project/test-infra/pkg/logging/v2"
 	tioidc "github.com/kyma-project/test-infra/pkg/oidc"
 	"github.com/spf13/cobra"
-	"go.uber.org/zap"
 )
 
 // Cobra root command for the OIDC claim extractor
@@ -155,19 +155,18 @@ func isTokenProvided(logger Logger, opts *options) error {
 // It uses OIDC discovery to get the identity provider public keys.
 func (opts *options) verifyToken() error {
 	var (
-		zapLogger *zap.Logger
 		err       error
 		token     *tioidc.Token
 	)
-	if opts.debug {
-		zapLogger, err = zap.NewDevelopment()
-	} else {
-		zapLogger, err = zap.NewProduction()
-	}
-	if err != nil {
-		return err
-	}
-	logger := zapLogger.Sugar()
+	// if opts.debug {
+	// 	zapLogger, err = zap.NewDevelopment()
+	// } else {
+	// 	zapLogger, err = zap.NewProduction()
+	// }
+	// if err != nil {
+	// 	return err
+	// }
+	logger, err := tilogger.New()
 
 	err = isTokenProvided(logger, opts)
 	if err != nil {

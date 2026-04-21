@@ -6,6 +6,7 @@ import (
 	"strings"
 
 	"cloud.google.com/go/logging"
+	loggingv2 "github.com/kyma-project/test-infra/pkg/logging/v2"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"google.golang.org/genproto/googleapis/api/monitoredres"
@@ -19,11 +20,11 @@ type GCPLogger struct {
 	client *logging.Client
 }
 
-// Compile-time check: GCPLogger must implement Logger.
-var _ Logger = (*GCPLogger)(nil)
+// Compile-time check: GCPLogger must implement logging.LoggerInterface.
+var _ loggingv2.LoggerInterface = (*GCPLogger)(nil)
 
 // With creates a child logger with additional context fields.
-func (l *GCPLogger) With(args ...interface{}) Logger {
+func (l *GCPLogger) With(args ...interface{}) loggingv2.LoggerInterface {
 	return &GCPLogger{
 		SugaredLogger: l.SugaredLogger.With(args...),
 		client:        l.client,
