@@ -47,12 +47,6 @@ jobs:
     if: ${{ contains(needs.detect-changed-files.outputs.files, 'build-slack-message-sender-filter') }}
     needs: detect-changed-files
     uses: kyma-project/test-infra/.github/workflows/build-slack-message-sender.yml@main
-
-  # !WARNING: This workflow counts as 4 separate jobs!
-  build-unified-agent:
-    if: ${{ contains(needs.detect-changed-files.outputs.files, 'build-unified-agent-filter') }}
-    needs: detect-changed-files
-    uses: kyma-project/test-infra/.github/workflows/build-unified-agent.yml@main
  
   build-oidc-token-verifier:
     needs: detect-changed-files

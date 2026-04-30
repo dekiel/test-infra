@@ -90,7 +90,3 @@ code-checks-python-filter:
 
 lint-markdown-links-pr-filter:
   - "**/*"
-
-build-unified-agent-filter:
-  - "images/unified-agent/**"
-  - ".github/workflows/image-builder.yml"
