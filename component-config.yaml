@@ -5,5 +5,5 @@ images:
   - europe-docker.pkg.dev/kyma-project/prod/github-webhook-gateway:v20260427115838
   - europe-docker.pkg.dev/kyma-project/prod/test-infra/rotate-service-account:v20260427115839
   - europe-docker.pkg.dev/kyma-project/prod/test-infra/service-account-keys-cleaner:v20260429200709
-  - europe-docker.pkg.dev/kyma-project/prod/test-infra/signify-secret-rotator:v20260424221008
+  - europe-docker.pkg.dev/kyma-project/prod/test-infra/signify-secret-rotator:v20260505021028
   - europe-docker.pkg.dev/kyma-project/prod/test-infra/slackmessagesender:v20260408214034
